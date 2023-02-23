@@ -1,0 +1,38 @@
+{
+  "name": "@template-pro/start-cli",
+  "version": "0.0.0",
+  "private": true,
+  "description": "",
+  "type": "module",
+  "bin": {
+    "template-start-cli": "index.js"
+  },
+  "main": "index.js",
+  "files": [
+    "index.js",
+    "dist"
+  ],
+  "scripts": {
+    "dev": "unbuild --stub",
+    "build": "unbuild",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "npm run build"
+  },
+  "engines": {
+    "node": "^14.18.0 || >=16.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/template-pro/start-cli.git"
+  },
+  "author": "Wuxh <wxh16144@qq.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^18.11.19",
+    "unbuild": "^1.1.1"
+  },
+  "dependencies": {
+    "chalk": "^5.2.0",
+    "mri": "^1.2.0"
+  }
+}
