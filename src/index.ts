@@ -3,6 +3,7 @@ import { fileURLToPath } from 'url';
 import path from "path";
 import c from "kleur";
 import mri from "mri";
+import terminalLink from 'terminal-link';
 import { Argv } from "./type";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -28,6 +29,7 @@ async function main(args: Argv = argv) {
     ----------------------------------------
     -${c.bold('h')}, --help: show help.
     -${c.bold('v')}, --version: show version. ${c.green('v' + pkg.version)}
+    see more: ${c.gray(terminalLink(pkg.homepage, pkg.homepage))}
     ----------------------------------------
     ${c.bold('e.g.')} ${c.green(`${command} -h`)} 
   `)
